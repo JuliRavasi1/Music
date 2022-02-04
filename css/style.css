@@ -102,29 +102,53 @@ main {
 .card-side{
     height: 35rem;
     border-radius: 15px;
-    transition: all 0.8 ease;
+    /* transition: all 0s ease; */
     backface-visibility: hidden;
     position: absolute;
     top: 140px;
     left: 0;
-    width: 80%;
+    width: 100%;
     padding: 2rem;
-    color: white;
+    color: #000;
     /* transform-style: preserve-3d; */
+}
+
+.card-side h3{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.card-side img{
+    width: 330px;
+    height: auto;
+    margin-top: 20%;
+    box-shadow: 4px 4px 6px #000;
+}
+
+.card-side p{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.card-side button{
+    padding: 1%;
+    background-color: blue;
+    font-size: 18px;
+    border: 0;
+    border-radius: 2px;
+    margin-top: 30%;
 }
 
 .card-side.back{
     transform: rotateY(-180deg);
-    background-color: #4158d0;
-    background-image: linear-gradient(43deg, #414141 0%, #C850C0 46%, #FFCC70 100%);
+    background-color: #fff;
+    /* background-image: linear-gradient(43deg, #414141 0%, #C850C0 46%, #FFCC70 100%); */
 }
 
 .card-side.front {
-    transition-delay: 0s;
-    transition-duration: 2s;
-    /* transition-timing-function: ease-in; */
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-color: #fff;
+    /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
 }
 
 .card:hover .card-side.front{

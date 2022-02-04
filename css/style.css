@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body {
+    height: 250vh;
+}
+
+header {
+    background-image: url(../images/microfonofondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35%;
+    width: 100%;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    margin-top: 2%;
+}
+
+.contenedortodo {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    display: inline;
+    padding: 5%;
+}
+
+nav ul {
+    width: 500px;
+    margin-top: 3%;
+}
+
+nav a {
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all .2s ease;
+}
+
+nav a:hover {
+    color: #e91d78;
+}
+
+.containertitulo {
+    padding-right: 1.5%;
+}
+
+header h2 {
+    padding: 8% 0 4% 1%;
+}
+
+header span {
+    color: #d8ccb8;
+}
+
+header p {
+    padding: 1% 0 1% 1%;
+}
+
+hr {
+    margin-left: 1%;
+    width: 50%;
+}
+
+main {
+    height: 60%;
+    color: #fff;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    background-color: #e91d78;
+    transform: translate(0, -110px);
+}
+
+.card{
+    /* background-color: aqua; */
+    perspective: 150rem;
+    position: relative;
+    height: 40rem;
+    max-width: 400px;
+    margin: 2rem;
+    box-shadow: none;
+    background: none;
+    /* transform: translate(0, 30%); */
+}
+
+.card-side{
+    height: 35rem;
+    border-radius: 15px;
+    transition: all 0.8 ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 80%;
+    padding: 2rem;
+    color: white;
+    /* transform-style: preserve-3d; */
+}
+
+.card-side.back{
+    transform: rotateY(-180deg);
+    background-color: #4158d0;
+    background-image: linear-gradient(43deg, #414141 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-side.front {
+    transition-delay: 0s;
+    transition-duration: 2s;
+    /* transition-timing-function: ease-in; */
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card:hover .card-side.front{
+    transform: rotateY(180deg);
+    transition: all 2s;
+}
+
+.card:hover .card-side.back{
+    transition: all 2s;
+    transform: rotateY(0deg);
+}
+
+footer {
+    margin-bottom: 0;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr) 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+.container0 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    background-color: #e91d792f;
+    width: 75%;
+    text-align: center;
+}
+
+.container0 h3 {
+    font-size: 25px;
+    padding-left: 4%;
+}
+
+.container0 span {
+    padding-left: 4%;
+}
+
+.container1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.container1 li {
+    list-style: none;
+}
+
+.container1 a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1%;
+    font-size: 18px;
+}
+
+.container1 a:hover {
+    color: #e91d78;
+}
+
+.container2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.container2 p {
+    font-size: 18px;
+}
+
+.container2 i {
+    font-size: 26px;
+    padding-left: 2px;
+}
+
+.container2 i:hover {
+    color: #e91d78;
+}
+
+.container3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.container3 p {
+    font-size: 14px;
+}
